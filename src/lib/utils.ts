@@ -15,3 +15,7 @@ export const loadScript = (src: string) => {
         document.body.appendChild(script);
     });
 };
+
+export const loadCosmicAssets = () => {
+   return loadScript('/assets/cosmic-theme.js');
+};

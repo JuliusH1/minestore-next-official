@@ -1,9 +1,9 @@
 export const imagePath = (path: string | null) => {
-    if (!path) {
-        return null;
-    }
+   if (!path) {
+      return null;
+   }
 
-    const image = (process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || '') + path;
+   const image = (process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || '') + path;
 
-    return image;
+   return `${image}?theme=cosmic`;
 };

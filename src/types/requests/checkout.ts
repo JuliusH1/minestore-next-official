@@ -1,17 +1,18 @@
 export type TCheckoutRequest = {
-    currency: string;
-    paymentMethod: string;
-    details?: {
-        fullname: string;
-        email: string;
-        address1: string;
-        address2?: string;
-        city: string;
-        country: string;
-        region: string;
-        zipcode: string;
-    };
-    termsAndConditions: boolean;
-    privacyPolicy: boolean;
-    discordId?: string | null;
+   currency: string;
+   paymentMethod: string;
+   details?: {
+      fullname: string;
+      email: string;
+      address1: string;
+      address2?: string;
+      city: string;
+      country: string;
+      region: string;
+      zipcode: string;
+   };
+   termsAndConditions: boolean;
+   privacyPolicy: boolean;
+   discordId?: string | null;
+   themeNote?: string; // e.g., "Thank you for shopping at VoidcraftMC!"
 };

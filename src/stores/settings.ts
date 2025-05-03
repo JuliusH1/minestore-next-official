@@ -7,6 +7,13 @@ type SettingsStore = {
 }
 
 export const useSettingsStore = create<SettingsStore>((set) => ({
-   settings: undefined,
+   settings: {
+      theme: 'voidcraftmc',
+      colors: {
+         primary: '#8a2be2', // Purple
+         secondary: '#ff69b4', // Pink
+         accent: '#ff4500' // Red
+      }
+   },
    setSettings: (settings) => set({ settings })
-}))
+}));

@@ -14,26 +14,24 @@ export const useUser = () => {
     const { setUser } = useUserStore();
     const router = useRouter();
 
-    const login = async (username: string) => {
-        try {
-            setLoading(true);
-            const response = await auth(username);
-            const token = response;
+   const login = async (username: string) => {
+      try {
+         setLoading(true);
+         const response = await auth(username);
+         const token = response;
 
-            setCookie('token', token, { maxAge: 21600 });
+         setCookie('token', token, { maxAge: 21600 });
+         setCookie('theme', 'voidcraftmc'); // Set theme cookie
 
-            const lastCategory = getCookie('lastCategoryClicked') || '/';
+         const lastCategory = getCookie('lastCategoryClicked') || '/';
 
-            // window.history.replaceState({}, '', lastCategory);
-            // router.replace(lastCategory);
-            // router.refresh();
-            window.location.replace(lastCategory);
-        } catch (error) {
-            console.error('Error while logging in:', error);
-        } finally {
-            setLoading(false);
-        }
-    };
+         window.location.replace(lastCategory);
+      } catch (error) {
+         console.error('Error while logging in:', error);
+      } finally {
+         setLoading(false);
+      }
+   };
 
     const loginAttemptInGame = async (username: string) => {
         try {

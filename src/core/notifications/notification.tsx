@@ -12,21 +12,21 @@ type NotificationProps = {
 };
 
 export const Notification: FC<NotificationProps> = ({ id, message, level }) => {
-    const styles = {
-        defaults: {
-            container: 'rounded w-96 py-4 px-6 border-b-4 flex-row text-white'
-        },
+   const styles = {
+      defaults: {
+         container: 'rounded w-96 py-4 px-6 border-b-4 flex-row text-white'
+      },
 
-        basic: {
-            container: 'bg-gray-600/70 border-gray-900'
-        },
-        red: {
-            container: 'bg-red-900/70 border-red-900'
-        },
-        green: {
-            container: 'bg-green-900/70 border-green-900'
-        }
-    };
+      basic: {
+         container: 'bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 border-purple-900'
+      },
+      red: {
+         container: 'bg-red-900/70 border-red-900'
+      },
+      green: {
+         container: 'bg-green-900/70 border-green-900'
+      }
+   };
 
     const [isEntering, setIsEntering] = useState(true);
     const [isLeaving, setIsLeaving] = useState(false);

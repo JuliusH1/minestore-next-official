@@ -8,7 +8,10 @@ type CartStore = {
 };
 
 export const useCartStore = create<CartStore>((set) => ({
-    details: undefined,
-    items: [],
-    setCart: ({ cart, items }) => set({ cart, items })
+   cart: undefined,
+   items: [],
+   setCart: ({ cart, items }) => set({
+      cart: { ...cart, theme: 'voidcraftmc' },
+      items
+   })
 }));
